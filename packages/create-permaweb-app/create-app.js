@@ -53,69 +53,13 @@ const init = async ({
   console.log(chalk.bold(`Using ${displayedCommand}.`));
 
   /**
-   * Create a package.json for the new project.
+   * Write it to disk. ==> Does not write a second package.json, just copies from template
+   * // @TODO fix app name in template package JSONs
    */
-
-  const nextScripts = {
-    dev: 'yarn workspace @create-permaweb-app/frontend dev',
-    build: 'yarn workspace @create-permaweb-app/frontend build',
-    start: 'yarn workspace @create-permaweb-app/frontend start',
-    lint: 'yarn workspace @create-permaweb-app/frontend lint',
-  };
-
-  const viteScripts = {
-    dev: 'yarn workspace @create-permaweb-app/frontend dev',
-    build: 'yarn workspace @create-permaweb-app/frontend build',
-    serve: 'yarn workspace @create-permaweb-app/frontend serve',
-  };
-
-  const arweaveScripts = {
-  };
-
-  const frontendScripts = framework === 'vite' ? viteScripts : nextScripts;
-  const backendScripts = arweaveScripts
-
-  const packageJson = {
-    name: appName,
-    version: '0.0.1',
-    description: `create-permaweb-app monorepo quickstart with ${framework} and ${backend}`,
-    main: 'index.js',
-    private: true,
-    scripts: {
-      ...frontendScripts,
-      ...backendScripts,
-    },
-    workspaces: {
-      packages: ['packages/*'],
-      nohoist: [
-        '**/@graphprotocol/graph-ts',
-        '**/@graphprotocol/graph-ts/**',
-        '**/backend',
-        '**/backend/**',
-      ],
-    },
-  };
-  /**
-   * Write it to disk.
-   */
-  fs.writeFileSync(
-    path.join(root, 'package.json'),
-    JSON.stringify(packageJson, null, 2) + os.EOL
-  );
-
-  /**
-   * These flags will be passed to `install()`.
-   */
-  // const installFlags = { useYarn, isOnline };
-  /**
-   * Create Next package.json and install dependencies.
-   */
-  // await installNext.installNext(appPath, installFlags, typescript);
-
-  console.log();
-  /**
-   * Copy the template files to the target directory.
-   */
+  // fs.writeFileSync(
+  //   path.join(root, 'package.json'),
+  //   JSON.stringify(packageJson, null, 2) + os.EOL
+  // );
 
   /**
    * Copy common files.
@@ -140,38 +84,7 @@ const init = async ({
   });
 
   /**
-   * Copy backend files.
-   */
-  // const backendpath = '';
-
-  // await cpy('**', root + '/packages/backend/', {
-  //   parents: true,
-  //   // cwd: path.join(__dirname, "templates", template),
-  //   cwd: path.join(__dirname, 'templates', backendpath),
-
-  //   filter: (name) => {
-  //     if (name.relativePath === 'package.json') {
-  //       return false;
-  //     }
-  //     return true;
-  //   },
-  //   rename: (name) => {
-  //     switch (name) {
-  //       case 'package-template.json': {
-  //         return 'package.json';
-  //       }
-  //       case 'gitmodules': {
-  //         return '.'.concat(name);
-  //       }
-  //       default: {
-  //         return name;
-  //       }
-  //     }
-  //   },
-  // });
-
-  /**
-   * Copy frontend files.
+   * Copy framework files.
    */
 
   await cpy('**', root + '/', {
@@ -233,29 +146,6 @@ const init = async ({
   console.log(
     `For a walk through guild, visit https://www.create-permaweb-app.xyz/get-started/quick-start`
   );
-  // console.log('Inside that directory, you can run several commands:');
-  // console.log();
-  // console.log();
-  // console.log('Suggest that you begin by, creating 3 terminals.');
-  // console.log();
-  // console.log('In one terminal type:');
-  // console.log(chalk.cyan('  cd'), cdpath);
-  // console.log(chalk.cyan(`  ${displayedCommand} ${useYarn ? '' : 'install '}`));
-  // console.log(
-  //   `  ${chalk.cyan(`${displayedCommand} ${useYarn ? '' : 'run '}chain`)}`
-  // );
-  // console.log();
-  // console.log('In a second terminal type:');
-  // console.log(chalk.cyan('  cd'), cdpath);
-  // console.log(
-  //   `  ${chalk.cyan(`${displayedCommand} ${useYarn ? '' : 'run '}deploy`)}`
-  // );
-  // console.log();
-  // console.log('In a third terminal type:');
-  // console.log(chalk.cyan('  cd'), cdpath);
-  // console.log(
-  //   `  ${chalk.cyan(`${displayedCommand} ${useYarn ? '' : 'run '}dev`)}`
-  // );
   console.log();
 };
 
