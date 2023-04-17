@@ -60,3 +60,5 @@ yarn-error.log\*
 # vercel
 
 .vercel
+
+wallet.json

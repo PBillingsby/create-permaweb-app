@@ -7,7 +7,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "deploy": "next build && next export && arkb deploy out --wallet wallet.json --use-bundler https://node2.bundlr.network"
   },
   "dependencies": {
     "@chakra-ui/react": "^2.4.9",
@@ -17,7 +18,8 @@
     "framer-motion": "^9.0.1",
     "next": "^13.1.6",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "arkb": "^1.1.61"
   },
   "devDependencies": {
     "@types/node": "^18.11.18",

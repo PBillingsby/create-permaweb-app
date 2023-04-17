@@ -6,16 +6,17 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "deploy": "next build && next export && arkb deploy out --wallet wallet.json --use-bundler https://node2.bundlr.network",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
-    "ethers": "^5.7.2",
     "next": "^13.1.6",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "arweave": "^1.13.5",
     "eslint": "^8.27.0",
     "eslint-config-next": "^13.0.2"
   }

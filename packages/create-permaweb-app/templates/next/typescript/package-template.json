@@ -7,7 +7,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "deploy": "next build && next export && arkb deploy out --wallet wallet.json --use-bundler https://node2.bundlr.network"
   },
   "dependencies": {
     "ethers": "^5.7.2",

@@ -1,13 +1,54 @@
+html,
 body {
+  background-color: #1E1E1E;
+  background-image: url('../arc.svg');
+  background-repeat: no-repeat;
+  background-position-y: bottom;
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+button {
+  cursor: pointer;
+}
+
+.main {
+  background-color: #111111;
+  background-image: url('../arc.svg');
+  background-repeat: no-repeat;
+  background-position-y: 0;
+  height: 100vh;
+  background-position: bottom center;
+}
+
+a {
+  border-bottom: solid .5px white;
+  text-underline-offset: 4px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  letter-spacing: 1px;
+}
+
+.content>p,
+a {
+  background: linear-gradient(to right, white, #616161);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }

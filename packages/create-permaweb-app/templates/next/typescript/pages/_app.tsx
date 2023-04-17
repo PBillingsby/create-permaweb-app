@@ -6,9 +6,6 @@ import '../styles/globals.css';
 // @TODO: Add Arweave dependencies
 
 const App = ({ Component, pageProps }: AppProps) => {
-  const isMounted = useIsMounted();
-
-  if (!isMounted) return null;
   return (
     <>
       <NextHead>

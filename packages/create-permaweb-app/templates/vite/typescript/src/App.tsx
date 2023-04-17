@@ -1,21 +1,13 @@
-function App() {
+export default function App() {
   return (
-    <div className="">
-      <header style={{ padding: '1rem' }}>
-      </header>
-      <main
-        style={{
-          minHeight: '60vh',
-          flex: '1',
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'center',
-          alignItems: 'center',
-        }}
-      >
-      </main>
+    <div>
+      <div className="main">
+        <div className="content">
+          <img src="../cpa.svg" alt="Logo" />
+          <p>Edit, save and reload</p>
+          <a href="https://cookbook.arweave.dev" target="_blank">Learn more how to build</a>
+        </div>
+      </div>
     </div>
   );
-}
-
-export default App;
+};

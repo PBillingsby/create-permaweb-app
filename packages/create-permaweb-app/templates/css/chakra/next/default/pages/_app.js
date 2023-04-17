@@ -4,13 +4,8 @@ import '../styles/globals.css';
 
 import { ChakraProvider } from '@chakra-ui/react';
 
-// Imports
-import { useIsMounted } from '../hooks';
-
 const App = ({ Component, pageProps }) => {
-  const isMounted = useIsMounted();
 
-  if (!isMounted) return null;
   return (
     <>
       <NextHead>
