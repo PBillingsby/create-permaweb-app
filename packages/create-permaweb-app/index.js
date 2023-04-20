@@ -100,6 +100,17 @@ async function run() {
     ],
   });
 
+  const resBundlr = await prompts({
+    type: 'select',
+    name: 'bundlr',
+    message: 'Use Bundlr?',
+    choices: [
+      { title: 'Node2', value: 'node2' },
+      { title: 'Node1', value: 'node1' },
+      { title: 'No', value: 'no' }
+    ],
+  });
+
   const resUseNpm = await prompts({
     type: 'select',
     name: 'useNpm',
@@ -133,6 +144,7 @@ async function run() {
       framework: resFramework.framework,
       // backend: resBackend.backend,
       css: resCSS.css,
+      bundlr: resBundlr.bundlr,
     });
   } catch (error) {
     console.log(error);

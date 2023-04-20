@@ -2,7 +2,9 @@
   "name": "create-permaweb-app",
   "version": "0.4.10",
   "description": "",
-  "scripts": {},
+  "scripts": {
+    "newCommand": "do dat"
+  },
   "keywords": [
     "create-permaweb-app",
     "web3",

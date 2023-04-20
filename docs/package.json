@@ -6,8 +6,7 @@
   "scripts": {
     "dev": "next",
     "start": "next start",
-    "build": "next build",
-    "deploy": "next build && next export && arkb deploy out --wallet wallet.json --use-bundler https://node2.bundlr.network"
+    "build": "next build"
   },
   "keywords": [],
   "author": "Eric Roupe",

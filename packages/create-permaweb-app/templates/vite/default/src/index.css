@@ -1,18 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 html,
 body {
   background-color: #1E1E1E;
-  background-image: url('../arc.svg');
+  /* background-image: url('./src/arc.svg') !important; */
   background-repeat: no-repeat;
   background-position-y: bottom;
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
 }
 
 * {
@@ -24,30 +23,47 @@ button {
 }
 
 .main {
+  margin: 0 auto;
   background-color: #111111;
-  background-image: url('../arc.svg');
-  background-repeat: no-repeat;
-  background-position-y: 0;
-  height: 100vh;
-  background-position: bottom center;
+  background: url('https://arweave.net/PFQ3XWgEi1fQW68L2zXNU5Y6YXNFFLE7efTEYane2YA') !important;
+  background-repeat: no-repeat !important;
+  background-position: bottom center !important;
+  background-size: contain !important;
+  max-height: 100vh;
 }
 
 a {
   border-bottom: solid .5px white;
   text-underline-offset: 4px;
+  width: 12.5rem;
+  margin: 0 auto;
 }
 
 .content {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
   height: 100vh;
   letter-spacing: 1px;
 }
 
-.content>p,
+.animation {
+  position: absolute;
+  margin-top: -10rem;
+}
+
+
+.overlay {
+  position: relative;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  margin-top: 15rem;
+}
+
+.overlay>p,
 a {
+  text-align: center;
   background: linear-gradient(to right, white, #616161);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

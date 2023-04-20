@@ -10,5 +10,6 @@ export default defineConfig({
       util: 'util',
     },
   },
+  base: '',
   plugins: [react()],
 });

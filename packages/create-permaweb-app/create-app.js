@@ -15,6 +15,7 @@ const init = async ({
   framework,
   backend,
   css,
+  bundlr
 }) => {
   console.log('running create-permaweb-app');
   const template = typescript ? 'typescript' : 'default';
@@ -117,6 +118,28 @@ const init = async ({
       parents: true,
       cwd: path.join(__dirname, 'templates/css', css, framework, template),
     });
+  }
+
+  if (bundlr) {
+    const packageJsonPath = path.join(originalDirectory, appName + '/package.json');
+    const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));
+
+    switch (bundlr) {
+      case 'no':
+        console.log("wtf")
+        packageJson.scripts.deploy =
+          framework === "vite" ?
+            "vite build && arkb deploy dist --wallet wallet.json" :
+            "next build && next export && arkb deploy out --wallet wallet.json";
+        fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2));
+        break;
+      default:
+        packageJson.scripts.deploy =
+          framework === "vite" ?
+            `vite build && arkb deploy dist --wallet wallet.json --use-bundler https://${bundlr}.bundlr.network` :
+            `next build && next export && arkb deploy out --wallet wallet.json --use-bundler https://${bundlr}.bundlr.network`;
+        fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2));
+    }
   }
 
   /**
