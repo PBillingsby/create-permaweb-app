@@ -126,7 +126,6 @@ const init = async ({
 
     switch (bundlr) {
       case 'no':
-        console.log("wtf")
         packageJson.scripts.deploy =
           framework === "vite" ?
             "vite build && arkb deploy dist --wallet wallet.json" :
