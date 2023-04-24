@@ -1,6 +1,6 @@
 html,
 body {
-  background-color: #1E1E1E;
+  background-color: #1E1E1E !important;
   background-repeat: no-repeat;
   background-position-y: bottom;
   padding: 0;

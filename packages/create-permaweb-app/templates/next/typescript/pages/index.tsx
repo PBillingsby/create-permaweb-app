@@ -13,7 +13,7 @@ export default function Home() {
         <div className="content">
           <Spline className="animation" scene="https://prod.spline.design/XLnDWYFfWJOD4Qlq/scene.splinecode" />
           <div className="overlay">
-            <img src="/subtext.svg" alt="Logo" />
+            <img src="./subtext.svg" alt="Logo" />
             <p>Edit, save and reload</p>
             <a href="https://cookbook.arweave.dev" target="_blank">Learn more how to build</a>
           </div>

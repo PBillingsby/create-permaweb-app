@@ -18,7 +18,9 @@
     "next": "^13.1.6",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "arkb": "^1.1.61"
+    "arkb": "^1.1.61",
+    "@splinetool/react-spline": "^2.2.6",
+    "@splinetool/runtime": "^0.9.298"
   },
   "devDependencies": {
     "eslint": "^8.27.0",
