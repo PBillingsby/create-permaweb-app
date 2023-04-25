@@ -121,7 +121,7 @@ const init = async ({
   }
 
   if (bundlr) {
-    const packageJsonPath = path.join(originalDirectory, appName + '/package.json');
+    const packageJsonPath = path.join(root, '/package.json');
     const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));
 
     switch (bundlr) {
