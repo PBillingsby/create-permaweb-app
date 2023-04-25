@@ -5,8 +5,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview",
-    "deploy": "vite build && arkb deploy dist --wallet wallet.json --use-bundler https://node2.bundlr.network"
+    "preview": "vite preview"
   },
   "dependencies": {
     "@chakra-ui/react": "^2.4.9",
@@ -19,7 +18,9 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "util": "^0.12.4",
-    "arkb": "^1.1.61"
+    "arkb": "^1.1.61",
+    "@splinetool/react-spline": "^2.2.6",
+    "@splinetool/runtime": "^0.9.298"
   },
   "devDependencies": {
     "@types/react": "^18.0.27",

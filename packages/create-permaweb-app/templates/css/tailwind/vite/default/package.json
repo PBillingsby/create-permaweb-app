@@ -5,8 +5,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview",
-    "deploy": "vite build && arkb deploy dist --wallet wallet.json --use-bundler https://node2.bundlr.network"
+    "preview": "vite preview"
   },
   "dependencies": {
     "buffer": "^6.0.3",

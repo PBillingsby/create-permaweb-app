@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Spline from '@splinetool/react-spline';
 
 export default function Home() {
   return (
@@ -10,9 +11,12 @@ export default function Home() {
       </Head>
       <div className="main">
         <div className="content">
-          <img src="/cpa.svg" alt="Logo" />
-          <p>Edit, save and reload</p>
-          <a href="https://cookbook.arweave.dev" target="_blank">Learn more how to build</a>
+          <Spline className="animation" scene="https://prod.spline.design/XLnDWYFfWJOD4Qlq/scene.splinecode" />
+          <div className="overlay">
+            <img src="./subtext.svg" alt="Logo" />
+            <p>Edit, save and reload</p>
+            <a href="https://cookbook.arweave.dev" target="_blank">Learn more how to build</a>
+          </div>
         </div>
       </div>
     </div>
