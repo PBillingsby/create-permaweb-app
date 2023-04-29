@@ -38,10 +38,6 @@ const init = async ({
     process.exit(1);
   }
 
-  // await makeDir.makeDir(path.join(root, 'packages'));
-  // await makeDir.makeDir(path.join(root, 'packages', 'frontend'));
-  // await makeDir.makeDir(path.join(root, 'packages', 'backend'));
-
   const useYarn = useNpm ? false : true;
   const originalDirectory = process.cwd();
 
@@ -53,10 +49,10 @@ const init = async ({
 
   console.log(chalk.bold(`Using ${displayedCommand}.`));
 
-  /**
-   * Write it to disk. ==> Does not write a second package.json, just copies from template
-   * // @TODO fix app name in template package JSONs
-   */
+  // /**
+  //  * Write it to disk. ==> Does not write a second package.json, just copies from template
+  //  * // @TODO fix app name in template package JSONs
+  //  */
   // fs.writeFileSync(
   //   path.join(root, 'package.json'),
   //   JSON.stringify(packageJson, null, 2) + os.EOL
