@@ -2,14 +2,14 @@
   "name": "@create-permaweb-app-docs/docs",
   "version": "0.1.0",
   "description": "",
-  "private": true,
+  "private": false,
   "scripts": {
     "dev": "next",
     "start": "next start",
     "build": "next build"
   },
   "keywords": [],
-  "author": "Eric Roupe",
+  "author": "Test",
   "license": "MIT",
   "dependencies": {
     "copy-to-clipboard": "^3.3.1",
