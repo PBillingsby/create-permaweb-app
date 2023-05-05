@@ -171,7 +171,7 @@ async function checkArkbInstalled() {
     });
 
     if (installArkb.arkb) {
-      console.loog('Installing arkb...')
+      console.log('Installing arkb...')
       execSync(`npm install -g arkb`);
       console.log('arkb installed')
     } else {
