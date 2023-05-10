@@ -12,7 +12,6 @@
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
     "buffer": "^6.0.3",
-    "ethers": "^5.7.2",
     "framer-motion": "^9.0.1",
     "process": "^0.11.10",
     "react": "^18.2.0",

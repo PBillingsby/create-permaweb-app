@@ -120,19 +120,21 @@ const init = async ({
   if (bundlr) {
     const packageJsonPath = path.join(root, '/package.json');
     const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));
-    if (bundlr !== 'no') packageJson.scripts.fundBundlr = `arkb fund-bundlr --use-bundler https://${bundlr}.bundlr.network -w wallet.json $AMOUNT`;
-
+    if (bundlr !== 'no') {
+      packageJson.scripts.fundBundlr = `arkb fund-bundler --use-bundler https://${bundlr}.bundlr.network -w wallet.json $AMOUNT`;
+      packageJson.scripts.balance = `arkb balance --w wallet.json --use-bundler https://${bundlr}.bundlr.network`;
+    }
     switch (bundlr) {
       case 'no':
         packageJson.scripts.deploy =
-          framework === "vite" ?
+          framework === "vite" || framework === "svelte" ?
             "vite build && arkb deploy dist --wallet wallet.json" :
             "next build && next export && arkb deploy out --wallet wallet.json";
         fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2));
         break;
       default:
         packageJson.scripts.deploy =
-          framework === "vite" ?
+          framework === "vite" || framework === "svelte" ?
             `vite build && arkb deploy dist --wallet wallet.json --use-bundler https://${bundlr}.bundlr.network` :
             `next build && next export && arkb deploy out --wallet wallet.json --use-bundler https://${bundlr}.bundlr.network`;
         fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2));
@@ -164,7 +166,7 @@ const init = async ({
   console.log(chalk.cyan(`  ${displayedCommand} ${useYarn ? '' : 'install '}`));
   console.log();
   console.log(
-    `For a walk through guild, visit https://www.create-permaweb-app.xyz/get-started/quick-start`
+    `For a walk through guild, visit https://www.create-permaweb-app.arweave.dev`
   );
   console.log();
 };

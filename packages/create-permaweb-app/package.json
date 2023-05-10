@@ -1,6 +1,6 @@
 {
   "name": "create-permaweb-app-test-1-1",
-  "version": "0.1.0-1",
+  "version": "0.4.1",
   "description": "",
   "keywords": [
     "create-permaweb-app",
@@ -15,7 +15,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ropats16/create-permaweb-app",
+    "url": "https://github.com/pbillingsby/create-permaweb-app",
     "directory": "packages/create-permaweb-app"
   },
   "homepage": "create-permaweb-app.xyz",

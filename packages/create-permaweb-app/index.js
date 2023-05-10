@@ -68,22 +68,29 @@ async function run() {
   const resFramework = await prompts({
     type: 'select',
     name: 'framework',
-    message: 'Framework : React w/ Next or Vite?',
+    message: 'Framework : Svelte, React w/ Next or Vite?',
     choices: [
+      { title: 'Svelte (recommended)', value: 'svelte' },
       { title: 'Next', value: 'next' },
-      { title: 'Vite', value: 'vite' },
+      { title: 'Vite', value: 'vite' }
     ],
   });
+
+
+  let cssChoices = [
+    { title: 'Vanilla CSS', value: null },
+    { title: 'Tailwind', value: 'tailwind' },
+  ];
+
+  if (resFramework.framework !== 'svelte') {
+    cssChoices.push({ title: 'Chakra', value: 'chakra' });
+  }
 
   const resCSS = await prompts({
     type: 'select',
     name: 'css',
     message: 'CSS Framework?',
-    choices: [
-      { title: 'Vanilla CSS', value: null },
-      { title: 'Tailwind', value: 'tailwind' },
-      { title: 'Chakra', value: 'chakra' },
-    ],
+    choices: cssChoices,
   });
 
   // const resBackend = await prompts({

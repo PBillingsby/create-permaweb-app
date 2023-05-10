@@ -1,0 +1,22 @@
+{
+  "name": "default",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "exports": {
+    ".": {
+      "svelte": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@sveltejs/vite-plugin-svelte": "^2.0.3",
+    "svelte": "^3.57.0",
+    "tinro": "^0.6.12",
+    "vite": "^4.3.2"
+  }
+}
