@@ -124,8 +124,10 @@ const init = async ({
   if (bundlr) {
     const packageJsonPath = path.join(root, '/package.json');
     const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));
-    if (bundlr !== 'no') packageJson.scripts.fundBundlr = `arkb fund-bundlr --use-bundler https://${bundlr}.bundlr.network -w wallet.json $AMOUNT`;
-
+    if (bundlr !== 'no') {
+      packageJson.scripts.fundBundlr = `arkb fund-bundler --use-bundler https://${bundlr}.bundlr.network -w wallet.json $AMOUNT`;
+      packageJson.scripts.checkBundlrBalance = `arkb balance --w wallet.json --use-bundler https://${bundlr}.bundlr.network`;
+    }
     switch (bundlr) {
       case 'no':
         packageJson.scripts.deploy =
