@@ -1,7 +1,3 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 html,
 body {
   background-color: #1E1E1E !important;
@@ -34,7 +30,7 @@ button {
 a {
   border-bottom: solid .5px white;
   text-underline-offset: 4px;
-  width: 12.5rem;
+
   margin: 0 auto;
 }
 

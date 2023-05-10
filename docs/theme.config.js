@@ -51,7 +51,7 @@ export default {
   },
   footer: true,
   footerEditLink: "",
-  footerText: <>MIT {new Date().getFullYear()} © Eric Roupe</>,
+  footerText: <>MIT {new Date().getFullYear()}</>,
   unstable_faviconGlyph: "🧱",
   unstable_flexsearch: true,
 };

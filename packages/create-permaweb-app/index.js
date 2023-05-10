@@ -5,6 +5,8 @@ const { Command } = require('commander');
 const path = require('path');
 const prompts = require('prompts');
 const { init } = require('./create-app');
+const { promisify } = require('util');
+const { execSync } = require('child_process');
 const checkForUpdate = require('update-check');
 const validated = require('./helpers/validate-pkg');
 const packageJson = require('./package.json');
@@ -35,6 +37,8 @@ const program = new Command(packageJson.name)
   .parse(process.argv);
 
 async function run() {
+  await checkArkbInstalled();
+
   if (typeof projectPath === 'string') {
     projectPath = projectPath.trim();
   }
@@ -76,7 +80,7 @@ async function run() {
     name: 'css',
     message: 'CSS Framework?',
     choices: [
-      { title: 'None', value: null },
+      { title: 'Vanilla CSS', value: null },
       { title: 'Tailwind', value: 'tailwind' },
       { title: 'Chakra', value: 'chakra' },
     ],
@@ -149,6 +153,32 @@ async function run() {
   } catch (error) {
     console.log(error);
   }
+}
+
+async function checkArkbInstalled() {
+  try {
+    execSync(`npm list -g arkb`);
+    console.log(`arkb is already installed globally`);
+  } catch (error) {
+    const installArkb = await prompts({
+      type: 'select',
+      name: 'arkb',
+      message: 'arkb must be installed to deploy permaweb apps. Install now?',
+      choices: [
+        { title: 'Yes', value: true },
+        { title: 'No', value: false }
+      ],
+    });
+
+    if (installArkb.arkb) {
+      console.log('Installing arkb...')
+      execSync(`npm install -g arkb`);
+      console.log('arkb installed')
+    } else {
+      console.log('To install arkb later, run `npm install -g arkb`')
+    }
+  }
+
 }
 
 const update = checkForUpdate(packageJson).catch(() => null);
