@@ -127,14 +127,14 @@ const init = async ({
     switch (bundlr) {
       case 'no':
         packageJson.scripts.deploy =
-          framework === "vite" ?
+          framework === "vite" || framework === "svelte" ?
             "vite build && arkb deploy dist --wallet wallet.json" :
             "next build && next export && arkb deploy out --wallet wallet.json";
         fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2));
         break;
       default:
         packageJson.scripts.deploy =
-          framework === "vite" ?
+          framework === "vite" || framework === "svelte" ?
             `vite build && arkb deploy dist --wallet wallet.json --use-bundler https://${bundlr}.bundlr.network` :
             `next build && next export && arkb deploy out --wallet wallet.json --use-bundler https://${bundlr}.bundlr.network`;
         fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2));

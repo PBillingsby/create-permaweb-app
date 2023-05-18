@@ -13,8 +13,8 @@ export default function Home() {
           <div className="content">
             <Spline className="animation" scene="https://prod.spline.design/XLnDWYFfWJOD4Qlq/scene.splinecode" />
             <div className="overlay">
-              <img src="./subtext.svg" alt="Logo" />
-              <p><a href="#" target="_blank">Get Started</a></p>
+              <img src="https://arweave.net/IWZM05IXemJ3vhKYjHfADhw-v8rw8sS2i39mVCbp-rQ" alt="Logo" />
+              <p><a href="https://create-permaweb-app.arweave.dev" target="_blank">Get Started</a></p>
               <a href="https://cookbook.arweave.dev" target="_blank">Explore the Arweave Cookbook</a>
             </div>
           </div>

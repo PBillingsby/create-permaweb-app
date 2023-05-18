@@ -68,10 +68,11 @@ async function run() {
   const resFramework = await prompts({
     type: 'select',
     name: 'framework',
-    message: 'Framework : React w/ Next or Vite?',
+    message: 'Framework : React w/ Next, Vite or Svelte?',
     choices: [
       { title: 'Next', value: 'next' },
       { title: 'Vite', value: 'vite' },
+      { title: 'Svelte (MPA)', value: 'svelte' }
     ],
   });
 
