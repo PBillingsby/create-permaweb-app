@@ -72,7 +72,7 @@ async function run() {
     choices: [
       { title: 'Svelte (recommended)', value: 'svelte' },
       { title: 'Next', value: 'next' },
-      { title: 'Vite', value: 'vite' }
+      { title: 'Vite', value: 'vite' },
     ],
   });
 
