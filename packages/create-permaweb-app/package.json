@@ -26,7 +26,7 @@
     "chalk": "2.4.2",
     "child_process": "^1.0.2",
     "commander": "^8.3.0",
-    "cpy": "^8.1.2",
+    "cpy": "^10.1.0",
     "cross-spawn": "^7.0.3",
     "npm": "^9.6.5",
     "prompts": "^2.4.2",
@@ -37,6 +37,5 @@
   },
   "engines": {
     "node": ">=14"
-  },
-  "gitHead": "da4ed9ad6fa2d4386d4e35e60c221fda2bc5ccaa"
+  }
 }

@@ -1,7 +1,7 @@
 {
   "name": "create-permaweb-app-test-1-1",
   "version": "0.1.0-5",
-  "private": false,
+  "private": true,
   "keywords": [
     "create-permaweb-app",
     "web3",
@@ -31,7 +31,7 @@
     "dev:docs": "yarn workspace @create-permaweb-app-docs/docs dev"
   },
   "devDependencies": {
-    "lerna": "^4.0.0"
+    "lerna": "^7.0.1"
   },
   "workspaces": [
     "packages/*",
