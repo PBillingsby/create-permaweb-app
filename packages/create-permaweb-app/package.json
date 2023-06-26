@@ -1,6 +1,6 @@
 {
   "name": "create-permaweb-app",
-  "version": "0.1.0",
+  "version": "0.1.3",
   "description": "A boilerplate for creating projects ready to deploy to the Permaweb.",
   "keywords": [
     "create-permaweb-app",

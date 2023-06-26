@@ -13,7 +13,7 @@
         alt="subtext"
       />
       <p>
-        <a href="https://create-permaweb-app.arweave.dev" target="_blank"
+        <a href="https://github.com/PBillingsby/create-permaweb-app/blob/main/README.md" target="_blank"
           >Get Started</a
         >
       </p>
