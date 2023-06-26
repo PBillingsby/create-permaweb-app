@@ -1,6 +1,6 @@
 {
-  "name": "create-permaweb-app-test-1-1",
-  "version": "0.4.1",
+  "name": "create-permaweb-app",
+  "version": "1.0.0",
   "description": "",
   "keywords": [
     "create-permaweb-app",
@@ -20,7 +20,7 @@
   },
   "homepage": "create-permaweb-app.xyz",
   "bin": {
-    "create-permaweb-app-test-1": "./index.js"
+    "create-permaweb-app": "./index.js"
   },
   "dependencies": {
     "chalk": "2.4.2",
@@ -31,12 +31,12 @@
     "npm": "^9.6.5",
     "prompts": "^2.4.2",
     "rimraf": "^3.0.2",
+    "semver": "7.5.2",
     "update-check": "1.5.4",
     "util": "^0.12.5",
     "validate-npm-package-name": "^3.0.0"
   },
   "engines": {
     "node": ">=14"
-  },
-  "gitHead": "da4ed9ad6fa2d4386d4e35e60c221fda2bc5ccaa"
+  }
 }
