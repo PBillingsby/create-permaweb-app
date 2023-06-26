@@ -33,9 +33,8 @@ This project is built with the following open source libraries, frameworks and l
 
 ## Deploy to Arweave
 <b>fundBundlr</b>
+Funds the Bundlr node using the specified wallet and amount in AR.
 ```
-fundBundlr - Funds the Bundlr node using the specified wallet and amount in AR.
-
 Usage:
   npm run fundBundlr $AMOUNT
   yarn fundBundlr $AMOUNT
@@ -53,9 +52,8 @@ Example:
 NOTE: Funds may take up to 30 minutes to become available to the specified node.
 ```
 <b>balance</b>
+Checks balance of specified Bundlr node
 ```
-balance - Checks balance of specified Bundlr node
-
 Usage:
   npm run balance
   yarn balance
@@ -68,9 +66,8 @@ Example:
   yarn balance
 ```
 <b>deploy</b>
+Generates static site and deploys it to Arweave
 ```
-deploy - Generates static site and deploys it to Arweave
-
 Usage:
   npm run deploy
   yarn deploy

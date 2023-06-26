@@ -53,9 +53,8 @@ Example:
 NOTE: Funds may take up to 30 minutes to become available to the specified node.
 ```
 <b>balance</b>
+Checks balance of specified Bundlr node
 ```
-balance - Checks balance of specified Bundlr node
-
 Usage:
   npm run balance
   yarn balance
@@ -68,9 +67,8 @@ Example:
   yarn balance
 ```
 <b>deploy</b>
+Generates static site and deploys it to Arweave
 ```
-deploy - Generates static site and deploys it to Arweave
-
 Usage:
   npm run deploy
   yarn deploy
