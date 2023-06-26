@@ -8,10 +8,8 @@ A boilerplate for creating projects ready to deploy to the Permaweb.
 ```bash
 npx create-permaweb-app APP_NAME
 ```
-
-2.  Run `yarn` or `npm install` to install all the dependencies
-3.  Once installation is complete, `cd` into your app's directory
-4.  Run `yarn dev` or `npm run dev` to start your dev environment
+2.  Once installation is complete, `cd` into your app's directory
+3.  Run `yarn dev` or `npm run dev` to start your dev environment
 
 ## Technologies
 
