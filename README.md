@@ -32,6 +32,11 @@ This project is built with the following open source libraries, frameworks and l
 | [Bundlr](https://bundlr.network/) | Scaling data layer for Arweave |
 
 ## Deploy to Arweave
+A funded Arweave wallet is a requirement to deploying applications using `create-permaweb-app`. 
+
+Drag and drop the `wallet.json` into the projects root directory. Ensure it is named `wallet.json` and detected by the `.gitignore` file.
+
+** IMPORTANT - KEEP YOUR KEYS SAFE. DO NOT PUSH wallet.json TO GITHUB **
 <b>fundBundlr</b>
 Funds the Bundlr node using the specified wallet and amount in AR.
 ```

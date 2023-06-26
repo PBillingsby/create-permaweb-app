@@ -1,7 +1,7 @@
 {
   "name": "create-permaweb-app",
-  "version": "1.0.0",
-  "private": true,
+  "version": "0.1.0",
+  "private": false,
   "keywords": [
     "create-permaweb-app",
     "web3",
@@ -40,5 +40,15 @@
     "packages/create-permaweb-app/templates/vite/*",
     "packages/create-permaweb-app/templates/svelte/*",
     "docs/"
-  ]
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pbillingsby/create-permaweb-app.git"
+  },
+  "author": "PBillingsby",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pbillingsby/create-permaweb-app/issues"
+  },
+  "homepage": "https://github.com/pbillingsby/create-permaweb-app#readme"
 }
