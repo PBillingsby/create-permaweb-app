@@ -36,8 +36,8 @@ A funded Arweave wallet is a requirement to deploying applications using `create
 
 Drag and drop the `wallet.json` into the projects root directory. Ensure it is named `wallet.json` and detected by the `.gitignore` file.
 
-** IMPORTANT - KEEP YOUR KEYS SAFE. DO NOT PUSH wallet.json TO GITHUB **
-<b>fundBundlr</b>
+<b>IMPORTANT - KEEP YOUR KEYS SAFE. DO NOT PUSH wallet.json TO GITHUB</b></br><hr>
+## <b>fundBundlr</b></br>
 Funds the Bundlr node using the specified wallet and amount in AR.
 ```
 Usage:
@@ -56,7 +56,7 @@ Example:
 
 NOTE: Funds may take up to 30 minutes to become available to the specified node.
 ```
-<b>balance</b>
+## <b>balance</b></br>
 Checks balance of specified Bundlr node
 ```
 Usage:
@@ -70,7 +70,7 @@ Example:
   npm run balance
   yarn balance
 ```
-<b>deploy</b>
+## <b>deploy</b></br>
 Generates static site and deploys it to Arweave
 ```
 Usage:
