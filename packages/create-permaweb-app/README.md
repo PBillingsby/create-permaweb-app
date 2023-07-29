@@ -1,21 +1,5 @@
 # create-permaweb-app
-
-TBD
-<!-- A boilerplate for creating a web3 projects
-
-This boilerplate quickly creates a mono repo with 2 environments, a react frontend environment and a Ethereum development environment for writing, testing and deploying contracts.
-
-<p>
-  <a href="https://www.npmjs.com/package/create-permaweb-app">
-    <img src="https://img.shields.io/npm/v/create-permaweb-app" alt="Version">
-  </a>
-    <a href="https://www.npmjs.com/package/create-permaweb-app">
-    <img src="https://img.shields.io/npm/dm/create-permaweb-app" alt="Downloads per month">
-  </a>
-  <a href="/LICENSE">
-    <img src="https://img.shields.io/npm/l/create-permaweb-app" alt="License">
-  </a>
-</p> -->
+A boilerplate for creating projects ready to deploy to the Permaweb.
 
 ## Quick Start Notes
 
@@ -27,25 +11,81 @@ npx create-permaweb-app APP_NAME
 
 2.  Run `yarn` or `npm install` to install all the dependencies
 3.  Once installation is complete, `cd` into your app's directory
-4.  Run `yarn dev` or `npm run dev` to start your Next dev environment
+4.  Run `yarn dev` or `npm run dev` to start your dev environment
 
 ## Technologies
 
-TBD
-<!-- This project is built with the following open source libraries, frameworks and languages. User choice of framework used, available in plain js or typescript.
+This project is built with the following open source libraries, frameworks and languages. User choice of framework used, available in plain js or typescript.
+
 | Tech | Description |
 | --------------------------------------------- | ------------------------------------------------------------------ |
 | ------ | ------ React Frontend Environment ------ |
 | [Next JS](https://nextjs.org/) | React Framework |
 | [Vite JS](https://vitejs.dev/) | Next Generation Frontend Tooling |
+| [Svelte](https://svelte.dev/) | Next Generation Frontend Tooling |
 | ------ | ------ CSS Framework ------ |
-| none | |
+| none | Plain CSS |
 | [Tailwind](https://tailwindcss.com/) | A utility-first CSS framework |
-| [Chakra](https://chakra-ui.com/) | A simple, modular and accessible component library that gives you the building blocks you need to build your React applications. | -->
+| [Chakra](https://chakra-ui.com/) | A simple, modular and accessible component library that gives you the building blocks you need to build your React applications. |
+| ------ | ------ Arweave Dependencies ------ |
+| [Arkb](https://github.com/textury/arkb) | Arweave deployment tool. |
+| [Bundlr](https://bundlr.network/) | Scaling data layer for Arweave |
 
+## Deploy to Arweave
+A funded Arweave wallet is a requirement to deploying applications using `create-permaweb-app`. 
+
+Drag and drop the `wallet.json` into the projects root directory. Ensure it is named `wallet.json` and detected by the `.gitignore` file.
+
+** IMPORTANT - KEEP YOUR KEYS SAFE. DO NOT PUSH wallet.json TO GITHUB **
+<b>fundBundlr</b>
+Funds the Bundlr node using the specified wallet and amount in AR.
+```
+Usage:
+  npm run fundBundlr $AMOUNT
+  yarn fundBundlr $AMOUNT
+
+Options:
+  $AMOUNT                Specify the amount, in AR, to fund the Bundlr node
+
+Description:
+  The 'fundBundlr' command is used to fund the Bundlr network by transferring a specified amount from the wallet file to the Bundlr node.
+
+Example:
+  npm run fundBundlr 0.1
+  yarn fundBundlr 0.1
+
+NOTE: Funds may take up to 30 minutes to become available to the specified node.
+```
+<b>balance</b>
+Checks balance of specified Bundlr node
+```
+Usage:
+  npm run balance
+  yarn balance
+
+Description:
+  The 'balance' command is used to check the balance of the Bundlr node.
+
+Example:
+  npm run balance
+  yarn balance
+```
+<b>deploy</b>
+Generates static site and deploys it to Arweave
+```
+Usage:
+  npm run deploy
+  yarn deploy
+
+Description:
+  The 'deploy' command is used to statically generate an application and deploy it to Arweave. It returns the transaction ID pointing to your deployed application. 
+
+Example:
+  npm run deploy
+  yarn deploy
+```
 ## Documentation
-
-TBD
+Full documentation coming soon
 
 ## Discussions
 

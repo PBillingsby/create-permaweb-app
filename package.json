@@ -1,7 +1,7 @@
 {
-  "name": "create-permaweb-app-test-1-1",
-  "version": "0.1.0",
-  "private": true,
+  "name": "create-permaweb-app",
+  "version": "0.1.2",
+  "private": false,
   "keywords": [
     "create-permaweb-app",
     "web3",
@@ -31,13 +31,24 @@
     "dev:docs": "yarn workspace @create-permaweb-app-docs/docs dev"
   },
   "devDependencies": {
-    "lerna": "^4.0.0"
+    "lerna": "^7.0.1"
   },
   "workspaces": [
     "packages/*",
     "packages/create-permaweb-app/*",
     "packages/create-permaweb-app/templates/next/*",
     "packages/create-permaweb-app/templates/vite/*",
+    "packages/create-permaweb-app/templates/svelte/*",
     "docs/"
-  ]
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pbillingsby/create-permaweb-app.git"
+  },
+  "author": "PBillingsby",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pbillingsby/create-permaweb-app/issues"
+  },
+  "homepage": "https://github.com/pbillingsby/create-permaweb-app#readme"
 }

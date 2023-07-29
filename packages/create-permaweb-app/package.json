@@ -1,7 +1,7 @@
 {
-  "name": "create-permaweb-app-test-1-1",
   "version": "0.5.0",
-  "description": "",
+  "name": "create-permaweb-app",
+  "description": "A boilerplate for creating projects ready to deploy to the Permaweb.",
   "keywords": [
     "create-permaweb-app",
     "web3",
@@ -15,12 +15,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/pbillingsby/create-permaweb-app",
+    "url": "git+https://github.com/pbillingsby/create-permaweb-app.git",
     "directory": "packages/create-permaweb-app"
   },
-  "homepage": "create-permaweb-app.xyz",
+  "homepage": "http://create-permaweb-app.xyz",
   "bin": {
-    "create-permaweb-app-test-1": "./index.js"
+    "create-permaweb-app": "index.js"
   },
   "dependencies": {
     "chalk": "2.4.2",
@@ -39,5 +39,13 @@
   "engines": {
     "node": ">=14"
   },
-  "gitHead": "da4ed9ad6fa2d4386d4e35e60c221fda2bc5ccaa"
+  "gitHead": "da4ed9ad6fa2d4386d4e35e60c221fda2bc5ccaa",
+  "bugs": {
+    "url": "https://github.com/pbillingsby/create-permaweb-app/issues"
+  },
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
 }
